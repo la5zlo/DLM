@@ -3,6 +3,9 @@ const goodsKey = 'goods';
 let goodsJson = localStorage.getItem(goodsKey);
 let goodsStore = JSON.parse(goodsJson);
 
+function save() {
+    localStorage.setItem(goodsKey, JSON.stringify(goodsStore));
+};
 export default {
 
     getAllGoods() {
@@ -13,9 +16,19 @@ export default {
         return goodsStore[index];
     },
 
+    addGood(good) {
+        goodsStore.push(good);
+        save();
+    },
+
     editGood(index, good) {
         goodsStore[index] = good;
 
-        localStorage.setItem(goodsStore, JSON.stringify(goodsStore));
+        save();
+    },
+
+    deleteGood(index) {
+        goodsStore.splice(index, 1);
+        save();
     }
 }

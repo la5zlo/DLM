@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GoodsHandlerWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30ed734f1053f6d648f02d4e78205a3f6eac0cfa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6061a08ee2d8ef0740d56b40f88fc6224d4f8a9b")]
 [assembly: System.Reflection.AssemblyProductAttribute("GoodsHandlerWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GoodsHandlerWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

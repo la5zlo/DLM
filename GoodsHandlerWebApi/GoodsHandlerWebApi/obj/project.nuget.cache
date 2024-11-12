@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UtciNp1lohA=",
+  "dgSpecHash": "VOtR6A6Tndg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\barta\\GoodsHandler\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj",
+  "projectFilePath": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barta\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\barta\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

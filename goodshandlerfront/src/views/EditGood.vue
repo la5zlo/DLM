@@ -9,7 +9,7 @@
                     <input
                         type="text"
                         class="form-control"
-                        v-model="goods.name"
+                        v-model="good.name"
                     />
                 </div>
                 <div class="mb-3">
@@ -20,7 +20,7 @@
                         type="text"
                         class="form-control"
                         rows="5"
-                        v-model="goods.itemDescription"
+                        v-model="good.itemDescription"
                     ></textarea>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <input
                     type="text"
                     class="form-control"
-                    v-model="goods.partNumber"
+                    v-model="good.partNumber"
                 />
             </div>
             <div class="mb-3">
@@ -42,7 +42,7 @@
                 <input
                     type="number"
                     class="form-control"
-                    v-model="goods.price"
+                    v-model="good.price"
                 />
             </div>
         </div>
@@ -50,16 +50,42 @@
         <div class="mb-3">
             <button
                 class="btn btn-primary"
-                :disabled="isFormValid"
-                @click.prevent="submitForm()"
-            >Create Page</button>
+                @click.prevent="edit()"
+            >Változtatások Mentése</button>
+            <button
+                class="btn btn-secondary"
+                @click.prevent="goToGoodsTable()"
+            >Vissza</button>
         </div>
     </form>
 </template>
 
-<script>
-import { inject } from 'vue';
+<script setup>
+import { useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
+import { inject, computed } from 'vue';
 
+const router = useRouter();
+const route = useRoute();
 const goods = inject('$goods');
+const index = route.params.index;
+
+const isFormValid = computed(() => {return !good.partNumber || !good.name || !good.itemDescription || !good.price });
+
+let good = goods.getSingleGood(index);
+
+function goToGoodsTable() {
+    router.push({path: '/'});
+};
+
+function edit() {
+    if(isFormValid.value) {
+            alert('Hiányzó adatok!')
+            return
+        };
+    goods.editGood(index, good);
+
+    goToGoodsTable();
+}
 
 </script>

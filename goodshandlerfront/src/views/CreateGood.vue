@@ -51,14 +51,55 @@
             <button
                 class="btn btn-primary"
                 :disabled="isFormValid"
-                @click.prevent="submitForm()"
-            >Create Page</button>
+                @click.prevent="createNewGood()"
+            >Mentés</button>
+            <button
+                class="btn btn-secondary"
+                @click.prevent="goToGoodsTable()"
+            >Vissza</button>
         </div>
     </form>
 </template>
 
-<script>
-    export default {
+<script setup>
+import { inject, ref, computed } from 'vue'
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter();
+const $goods = inject('$goods');
+const isFormValid = computed(() => {return !partNumber.value || !name.value || !itemDescription.value || !price.value });
+
+let partNumber = ref('');
+let name = ref('');
+let itemDescription = ref('');
+let price = ref('');
+
+function createNewGood() {
+        if(!isFormValid) {
+            alert('Please fill the form!')
+            return
+        };
+        $goods.addGood({
+            partNumber: partNumber.value,
+            name: name.value,
+            itemDescription: itemDescription.value,
+            price: price.value
+        });
+
+        goToGoodsTable();
+    };
+
+function goToGoodsTable() {
+        router.push({path: '/'});
+    }
+
+    /*export default {
+        computed:{ 
+            isFormValid() {
+                return !this.partNumber || !this.name || !this.itemDescription || !this.price;
+            }
+        },
         data() {
             return {
                 partNumber:"",
@@ -66,6 +107,21 @@
                 itemDescription:"",
                 price:""
             }
+        },
+        methods:{
+            createNewGood() {
+                if(isFormValid()) {
+                    alert('Please fill the form!')
+                    return
+                }
+                $goods.addGood(this.partNumber, this.name, this.itemDescription,this.price);
+
+                goToGoodsTable();
+            },
+
+            goToGoodsTable() {
+                router.push({path: '/'});
+            }
         }
-    }
+    }*/
 </script>

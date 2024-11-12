@@ -26,6 +26,8 @@ namespace GoodsHandlerWebApi
 
             var app = builder.Build();
 
+            app.UseCors(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+
             if (args.Length == 1 && args[0].ToLower() == "seeddata")
                 SeedData(app);
 

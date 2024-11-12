@@ -1,11 +1,22 @@
 const goodsKey = 'goods';
+const API_URL= "http://localhost:7084";
 
-let goodsJson = localStorage.getItem(goodsKey);
-let goodsStore = JSON.parse(goodsJson);
+//let goodsJson = localStorage.getItem(goodsKey);
+let goodsJson = goodsListCreate();
+let goodsStore = JSON.parse(goodsJson) || [];
 
 function save() {
     localStorage.setItem(goodsKey, JSON.stringify(goodsStore));
 };
+
+async function goodsListCreate(){
+    axios.get(API_URL+"/inventory/GetGoods").then(
+    (response)=>{
+        return response.data;
+    }
+    )
+};
+
 export default {
 
     getAllGoods() {

@@ -50,16 +50,19 @@ import { useRouter } from 'vue-router';
 
 const $goods = inject('$goods');
 const router = useRouter();
-const goodsList = ref($goods.getAllGoods());
+let goodsList = reactive($goods.getAllGoods());
 
 function openEdit(index){
     router.push({path:`edit/${index}`})
 };
 
 function deleteChosen(index){
+    const confirmation = confirm("Are you sure you want to delete this item?");
+    if(confirmation){
     $goods.deleteGood(index);
-
-    goodsList.value = $goods.getAllGoods()
+    
+    goodsList = $goods.getAllGoods();
+    }
 }
 </script>
 

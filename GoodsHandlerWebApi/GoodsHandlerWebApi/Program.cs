@@ -19,14 +19,28 @@ namespace GoodsHandlerWebApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            //SQL connection handling
             builder.Services.AddDbContext<DataContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            //Setting CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins", policy =>
+                {
+                    policy.AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowAnyOrigin();
+                });
+            });
+
             var app = builder.Build();
 
-            app.UseCors(c => c.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
+            //Apply CORS policy
+            app.UseCors("AllowAllOrigins");
 
             if (args.Length == 1 && args[0].ToLower() == "seeddata")
                 SeedData(app);

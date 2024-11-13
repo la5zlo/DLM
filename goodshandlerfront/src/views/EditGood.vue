@@ -70,11 +70,15 @@ const route = useRoute();
 const goods = inject('$goods');
 const index = route.params.index;
 
+
+
 const isFormValid = computed(() => {return !good.partNumber || !good.name || !good.itemDescription || !good.price });
 
-let good = goods.getSingleGood(index);
+let originalGood = goods.getSingleGood(index);
+let good = {...originalGood};
 
 function goToGoodsTable() {
+    good = {...originalGood};
     router.push({path: '/'});
 };
 
@@ -83,8 +87,14 @@ function edit() {
             alert('Hiányzó adatok!')
             return
         };
-    goods.editGood(index, good);
-
+        goods.editGood(good.id,{
+            id: good.id, 
+            partNumber: good.partNumber,
+            name: good.name,
+            itemDescription: good.itemDescription,
+            price: good.price 
+        });
+        console.log(good.id);
     goToGoodsTable();
 }
 

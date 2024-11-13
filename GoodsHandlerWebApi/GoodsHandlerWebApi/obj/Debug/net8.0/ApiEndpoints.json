@@ -2,7 +2,7 @@
   {
     "ContainingType": "GoodsHandlerWebApi.Controllers.GoodsController",
     "Method": "GetGoods",
-    "RelativePath": "inventory/Goods",
+    "RelativePath": "api/Goods",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "GoodsHandlerWebApi.Controllers.GoodsController",
     "Method": "CreateGood",
-    "RelativePath": "inventory/Goods",
+    "RelativePath": "api/Goods",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -53,7 +53,7 @@
   {
     "ContainingType": "GoodsHandlerWebApi.Controllers.GoodsController",
     "Method": "UpdateGood",
-    "RelativePath": "inventory/Goods/{goodId}",
+    "RelativePath": "api/Goods/{goodId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -98,7 +98,7 @@
   {
     "ContainingType": "GoodsHandlerWebApi.Controllers.GoodsController",
     "Method": "DeleteGood",
-    "RelativePath": "inventory/Goods/{goodId}",
+    "RelativePath": "api/Goods/{goodId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

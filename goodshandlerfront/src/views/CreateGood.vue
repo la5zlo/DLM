@@ -75,7 +75,7 @@ let name = ref('');
 let itemDescription = ref('');
 let price = ref('');
 
-function createNewGood() {
+async function createNewGood() {
         if(!isFormValid) {
             alert('Please fill the form!')
             return
@@ -87,7 +87,7 @@ function createNewGood() {
             price: price.value
         });
 
-        goToGoodsTable();
+        await goToGoodsTable();
     };
 
 function goToGoodsTable() {

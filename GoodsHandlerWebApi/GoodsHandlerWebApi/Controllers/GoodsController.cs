@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace GoodsHandlerWebApi.Controllers
 {
-    [Route("inventory/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class GoodsController : Controller
     {

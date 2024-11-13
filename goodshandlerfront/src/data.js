@@ -1,20 +1,22 @@
 const goodsKey = 'goods';
-const API_URL= "http://localhost:7084";
+const API_URL= "https://localhost:7084/";
 
 //let goodsJson = localStorage.getItem(goodsKey);
-let goodsJson = goodsListCreate();
-let goodsStore = JSON.parse(goodsJson) || [];
+let goodsStore = await goodsListCreate();
+//let goodsStore = await JSON.parse(goodsJson) || [];
 
 function save() {
     localStorage.setItem(goodsKey, JSON.stringify(goodsStore));
 };
 
 async function goodsListCreate(){
-    axios.get(API_URL+"/inventory/GetGoods").then(
-    (response)=>{
+    try {
+        const response = await axios.get(`${API_URL}api/Goods`);
+        //console.log(response.data);
         return response.data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
     }
-    )
 };
 
 export default {
@@ -28,18 +30,23 @@ export default {
     },
 
     addGood(good) {
-        goodsStore.push(good);
-        save();
+        axios.post(`${API_URL}api/Goods`,good);
+
+        /*goodsStore.push(good);
+        save();*/
     },
 
-    editGood(index, good) {
-        goodsStore[index] = good;
+    editGood(goodId, good) {
+        axios.put(`${API_URL}api/Goods/${goodId}`,good);
 
-        save();
+        /*goodsStore[index] = good;
+        save();*/
     },
 
-    deleteGood(index) {
-        goodsStore.splice(index, 1);
-        save();
+    deleteGood(goodId) {
+        axios.delete(`${API_URL}api/Goods/${goodId}`);
+
+        /*goodsStore.splice(index, 1);
+        save();*/
     }
 }

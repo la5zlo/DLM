@@ -19,7 +19,7 @@
         <tbody>
             <tr
                 v-for="(good, index) in goodsList"
-                :key="index"
+                :key="good.id"
             >
                 <td>{{ good.partNumber }}</td>
                 <td>{{ good.name }}</td>
@@ -35,7 +35,7 @@
                     <div class="mb-3">
                          <button
                             class="btn btn-secondary"
-                            @click.prevent="deleteChosen(index)"
+                            @click.prevent="deleteChosen(good.id)"
                         >Törlés</button>
                     </div>
                 </td>
@@ -52,16 +52,18 @@ const $goods = inject('$goods');
 const router = useRouter();
 let goodsList = reactive($goods.getAllGoods());
 
+
+
 function openEdit(index){
     router.push({path:`edit/${index}`})
 };
 
-function deleteChosen(index){
+function deleteChosen(goodId){
     const confirmation = confirm("Are you sure you want to delete this item?");
     if(confirmation){
-    $goods.deleteGood(index);
-    
-    goodsList = $goods.getAllGoods();
+    $goods.deleteGood(goodId);
+    console.log(goodId);
+    router.go(0);
     }
 }
 </script>

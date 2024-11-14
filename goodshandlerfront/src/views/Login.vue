@@ -30,7 +30,40 @@
 </template>
 
 <script setup>
+import { ref, inject } from 'vue';
+import { useRouter } from 'vue-router';
 
+
+const router = useRouter();
+const username = ref('');
+const password = ref('');
+const isAuth = inject('isAuth');
+
+async function login() {
+    try {
+        const credentials = {
+            AccountName: username.value,
+            Password: password.value
+        };
+
+        const response = await axios.post(`https://localhost:7084/api/Login`, credentials);
+
+        if (response && response.status === 200) {
+            isAuth.value= true;
+            router.push({path: '/goods'});
+        }
+    } catch (error) {
+        if (error.response) {
+            if (error.response.status === 401) {
+                alert("Hibás felhasználónév vagy jelszó.");
+            } else {
+                alert("Bejelentkezési hiba, próbáld újra.");
+            }
+        } else {
+            alert("Hálózati hiba vagy a szerver nem elérhető.");
+        }
+    }
+}
 
 
 </script>

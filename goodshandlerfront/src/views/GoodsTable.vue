@@ -2,7 +2,7 @@
     <h1>Terméklista</h1>
     <div class="text-end mb-3">
         <router-link 
-            to="/add"
+            to="/goods/add"
             class="custom-large-button"
         >Új termék</router-link>
     </div>
@@ -55,7 +55,7 @@ let goodsList = reactive($goods.getAllGoods());
 
 
 function openEdit(index){
-    router.push({path:`edit/${index}`})
+    router.push({path:`/goods/edit/${index}`})
 };
 
 function deleteChosen(goodId){

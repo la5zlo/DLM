@@ -134,5 +134,36 @@
         "StatusCode": 404
       }
     ]
+  },
+  {
+    "ContainingType": "GoodsHandlerWebApi.Controllers.LoginController",
+    "Method": "GetLogin",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountToCheck",
+        "Type": "GoodsHandlerWebApi.Modells.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
   }
 ]

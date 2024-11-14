@@ -39,7 +39,7 @@ namespace GoodsHandlerWebApi.Controllers
         {
             if (goodCreate == null)
                 return BadRequest(ModelState);
-
+            
             var good = _goodsRepository.GetGoods()
                 .Where(g => g.Name.Trim().ToUpper() == goodCreate.Name.TrimEnd().ToUpper())
                 .FirstOrDefault();

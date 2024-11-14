@@ -75,7 +75,7 @@ let name = ref('');
 let itemDescription = ref('');
 let price = ref('');
 
-async function createNewGood() {
+function createNewGood() {
         if(!isFormValid) {
             alert('Please fill the form!')
             return
@@ -87,11 +87,11 @@ async function createNewGood() {
             price: price.value
         });
 
-        await goToGoodsTable();
+        goToGoodsTable();
     };
 
 function goToGoodsTable() {
-        router.push({path: '/'});
+        router.push({path: '/goods'});
     }
 
     /*export default {

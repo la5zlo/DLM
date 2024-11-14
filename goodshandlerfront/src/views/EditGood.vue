@@ -79,7 +79,7 @@ let good = {...originalGood};
 
 function goToGoodsTable() {
     good = {...originalGood};
-    router.push({path: '/'});
+    router.push({path: '/goods'});
 };
 
 function edit() {
@@ -94,8 +94,7 @@ function edit() {
             itemDescription: good.itemDescription,
             price: good.price 
         });
-        console.log(good.id);
-    goToGoodsTable();
+        goToGoodsTable();
 }
 
 </script>

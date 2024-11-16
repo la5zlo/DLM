@@ -5,6 +5,10 @@
             to="/goods/add"
             class="custom-large-button"
         >Új termék</router-link>
+        <button
+            class="btn btn-secondary"
+            @click.prevent="refresh(goodsList)"
+        >Frissítés</button>
     </div>
     <table class="table table-hover custom-table">
         <thead class="table-header">
@@ -45,25 +49,50 @@
 </template>
 
 <script setup>
-import {ref, reactive, inject} from 'vue';
+import {ref, reactive, inject, onMounted, onUnmounted} from 'vue';
 import { useRouter } from 'vue-router';
 
 const $goods = inject('$goods');
+const $bus = inject('$bus');
 const router = useRouter();
 let goodsList = reactive($goods.getAllGoods());
 
+onMounted(() => {
+    $bus.$on('good-created', async () => {
+        await refresh(); 
+    });
 
+    $bus.$on('good-edited', async () => {
+        await refresh(); 
+    });
+});
 
 function openEdit(index){
     router.push({path:`/goods/edit/${index}`})
 };
 
-function deleteChosen(goodId){
+async function deleteChosen(goodId){
     const confirmation = confirm("Are you sure you want to delete this item?");
     if(confirmation){
     $goods.deleteGood(goodId);
-    console.log(goodId);
-    router.go(0);
+    await console.log(goodId);
+    //router.go(0);
+    refresh();
+    }
+};
+
+async function refresh() {
+    try {
+        const updatedGoods = await $goods.goodsListCreate(); // API hívás
+        if (updatedGoods) {
+            goodsList.length = 0; // Kiürítjük a meglévő listát
+            goodsList.push(...updatedGoods); // Hozzáadjuk az új elemeket
+            console.log("Frissített goodsList:", goodsList);
+        } else {
+            console.error("Nem sikerült frissíteni a goodsList-et.");
+        }
+    } catch (error) {
+        console.error("Hiba történt a frissítés során:", error);
     }
 }
 </script>

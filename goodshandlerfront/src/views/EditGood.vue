@@ -68,6 +68,7 @@ import { inject, computed } from 'vue';
 const router = useRouter();
 const route = useRoute();
 const goods = inject('$goods');
+const bus = inject('$bus');
 const index = route.params.index;
 
 
@@ -82,19 +83,20 @@ function goToGoodsTable() {
     router.push({path: '/goods'});
 };
 
-function edit() {
+async function edit() {
     if(isFormValid.value) {
             alert('Hiányzó adatok!')
             return
-        };
-        goods.editGood(good.id,{
+    };
+    await goods.editGood(good.id,{
             id: good.id, 
             partNumber: good.partNumber,
             name: good.name,
             itemDescription: good.itemDescription,
             price: good.price 
-        });
-        goToGoodsTable();
+    });
+    bus.$emit('good-updated')
+    goToGoodsTable();
 }
 
 </script>

@@ -62,30 +62,35 @@
 </template>
 
 <script setup>
-import { inject, ref, computed } from 'vue'
+import { inject, ref, computed} from 'vue'
 import { useRouter } from 'vue-router';
 
 
 const router = useRouter();
 const $goods = inject('$goods');
+const bus = inject('$bus');
 const isFormValid = computed(() => {return !partNumber.value || !name.value || !itemDescription.value || !price.value });
+
 
 let partNumber = ref('');
 let name = ref('');
 let itemDescription = ref('');
 let price = ref('');
 
-function createNewGood() {
+async function createNewGood() {
         if(!isFormValid) {
             alert('Please fill the form!')
             return
         };
-        $goods.addGood({
+
+        await $goods.addGood({
             partNumber: partNumber.value,
             name: name.value,
             itemDescription: itemDescription.value,
             price: price.value
         });
+
+        bus.$emit('good-created')
 
         goToGoodsTable();
     };
@@ -93,35 +98,4 @@ function createNewGood() {
 function goToGoodsTable() {
         router.push({path: '/goods'});
     }
-
-    /*export default {
-        computed:{ 
-            isFormValid() {
-                return !this.partNumber || !this.name || !this.itemDescription || !this.price;
-            }
-        },
-        data() {
-            return {
-                partNumber:"",
-                name:"",
-                itemDescription:"",
-                price:""
-            }
-        },
-        methods:{
-            createNewGood() {
-                if(isFormValid()) {
-                    alert('Please fill the form!')
-                    return
-                }
-                $goods.addGood(this.partNumber, this.name, this.itemDescription,this.price);
-
-                goToGoodsTable();
-            },
-
-            goToGoodsTable() {
-                router.push({path: '/'});
-            }
-        }
-    }*/
 </script>

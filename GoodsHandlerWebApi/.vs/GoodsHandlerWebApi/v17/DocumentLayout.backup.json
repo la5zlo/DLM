@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|solutionrelative:goodshandlerwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|c:\\users\\barta\\application\\goodshandlerwebapi\\goodshandlerwebapi\\controllers\\goodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|solutionrelative:goodshandlerwebapi\\controllers\\goodscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|c:\\users\\barta\\application\\goodshandlerwebapi\\goodshandlerwebapi\\modells\\goods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|solutionrelative:goodshandlerwebapi\\modells\\goods.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|c:\\users\\barta\\application\\goodshandlerwebapi\\goodshandlerwebapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|solutionrelative:goodshandlerwebapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|c:\\users\\barta\\application\\goodshandlerwebapi\\goodshandlerwebapi\\repository\\goodsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|solutionrelative:goodshandlerwebapi\\repository\\goodsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5E6969B-F973-42EB-A223-46A250EAEA2F}|GoodsHandlerWebApi\\GoodsHandlerWebApi.csproj|c:\\users\\barta\\application\\goodshandlerwebapi\\goodshandlerwebapi\\interface\\iloginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,6 +37,14 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
@@ -55,16 +55,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T08:41:36.474Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -74,14 +65,14 @@
               "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Controllers\\LoginController.cs",
               "RelativeToolTip": "GoodsHandlerWebApi\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T11:03:09.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Modells\\Login.cs",
               "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Modells\\Login.cs",
@@ -89,12 +80,11 @@
               "RelativeToolTip": "GoodsHandlerWebApi\\Modells\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T11:01:29.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T11:01:29.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "LoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Repository\\LoginRepository.cs",
               "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Repository\\LoginRepository.cs",
@@ -102,12 +92,11 @@
               "RelativeToolTip": "GoodsHandlerWebApi\\Repository\\LoginRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T10:57:55.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T10:57:55.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "ILoginRepository.cs",
               "DocumentMoniker": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Interface\\ILoginRepository.cs",
               "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Interface\\ILoginRepository.cs",
@@ -115,12 +104,11 @@
               "RelativeToolTip": "GoodsHandlerWebApi\\Interface\\ILoginRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T10:55:56.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T10:55:56.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Goods.cs",
               "DocumentMoniker": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Modells\\Goods.cs",
               "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Modells\\Goods.cs",
@@ -128,55 +116,7 @@
               "RelativeToolTip": "GoodsHandlerWebApi\\Modells\\Goods.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T11:01:24.66Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "8278169e-f14b-41b0-8850-98d8054c33d1",
-        "Display": 1,
-        "X": 386,
-        "Y": 112,
-        "Width": 1468,
-        "Height": 729,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GoodsRepository.cs",
-              "DocumentMoniker": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Repository\\GoodsRepository.cs",
-              "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Repository\\GoodsRepository.cs",
-              "ToolTip": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Repository\\GoodsRepository.cs",
-              "RelativeToolTip": "GoodsHandlerWebApi\\Repository\\GoodsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T10:00:17.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GoodsController.cs",
-              "DocumentMoniker": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Controllers\\GoodsController.cs",
-              "RelativeDocumentMoniker": "GoodsHandlerWebApi\\Controllers\\GoodsController.cs",
-              "ToolTip": "C:\\Users\\barta\\application\\GoodsHandlerWebApi\\GoodsHandlerWebApi\\Controllers\\GoodsController.cs",
-              "RelativeToolTip": "GoodsHandlerWebApi\\Controllers\\GoodsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCkAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T10:43:40.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T11:01:24.66Z"
             }
           ]
         }

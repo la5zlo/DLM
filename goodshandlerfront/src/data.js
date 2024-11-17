@@ -40,20 +40,20 @@ export default {
         return goodsStore[index];
     },
 
-    addGood(good) {
-        axios.post(`${API_URL}api/Goods`,good);
+    async addGood(good) {
+        await axios.post(`${API_URL}api/Goods`,good);
         //save();
     },
 
-    editGood(goodId, good) {
-        axios.put(`${API_URL}api/Goods/${goodId}`,good);
+    async editGood(goodId, good) {
+        await axios.put(`${API_URL}api/Goods/${goodId}`,good);
 
         /*goodsStore[index] = good;
         save();*/
     },
 
-    deleteGood(goodId) {
-        axios.delete(`${API_URL}api/Goods/${goodId}`);
+    async deleteGood(goodId) {
+        await axios.delete(`${API_URL}api/Goods/${goodId}`);
 
         /*goodsStore.splice(index, 1);
         save();*/

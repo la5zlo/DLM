@@ -62,7 +62,7 @@ onMounted(() => {
         await refresh(); 
     });
 
-    $bus.$on('good-edited', async () => {
+    $bus.$on('good-updated', async () => {
         await refresh(); 
     });
 });
@@ -74,25 +74,20 @@ function openEdit(index){
 async function deleteChosen(goodId){
     const confirmation = confirm("Are you sure you want to delete this item?");
     if(confirmation){
-    $goods.deleteGood(goodId);
-    await console.log(goodId);
+    await $goods.deleteGood(goodId);
+    console.log(goodId);
     //router.go(0);
     refresh();
     }
 };
 
 async function refresh() {
-    try {
-        const updatedGoods = await $goods.goodsListCreate(); // API hívás
-        if (updatedGoods) {
-            goodsList.length = 0; // Kiürítjük a meglévő listát
-            goodsList.push(...updatedGoods); // Hozzáadjuk az új elemeket
-            console.log("Frissített goodsList:", goodsList);
-        } else {
-            console.error("Nem sikerült frissíteni a goodsList-et.");
-        }
-    } catch (error) {
-        console.error("Hiba történt a frissítés során:", error);
+    const updatedGoods = await $goods.goodsListCreate(); 
+    if (updatedGoods) {
+        goodsList.length = 0; 
+        goodsList.push(...updatedGoods); 
+    } else {
+        console.error("Nem sikerült frissíteni a goodsList-et.");
     }
 }
 </script>
